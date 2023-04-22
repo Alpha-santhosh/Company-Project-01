@@ -31,7 +31,6 @@ function Github() {
     (data.length > 1) ? (
       <div className="github">
         <h4>Current page : {page}</h4>
-        <br />
         <div className="footer_btn">
           {!((page - 1) === 0) ? (<button type='button' onClick={() => {
             if (page > 1) {
@@ -45,7 +44,6 @@ function Github() {
             disptach(getSagaData(page + 1))
           }}><a href='#app'>page {page + 1}</a></button>
         </div>
-        <br />
         {
           data.map((e) => {
             const { avatar, repoName, desp, stars, issue, lastPush, user_name } = e;
